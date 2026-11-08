@@ -1,0 +1,12 @@
+{
+  "name": "tosee-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "وب‌سایت حزب توسعه البرز",
+  "scripts": {
+    "start": "serve -s . -l tcp://0.0.0.0:$PORT"
+  },
+  "dependencies": {
+    "serve": "^14.2.4"
+  }
+}
