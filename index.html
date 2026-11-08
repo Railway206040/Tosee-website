@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101d35">
+<meta name="description" content="وب‌سایت معرفی حزب توسعه البرز و نامزدهای شورای دانش‌آموزی">
+<title>حزب توسعه البرز | شورای دانش‌آموزی</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap');
+:root{--navy:#101d35;--navy2:#172b4d;--gold:#d8b56d;--cream:#f7f5ef;--ink:#18243a;--muted:#667085;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Vazirmatn,Tahoma,sans-serif;background:var(--cream);color:var(--ink);line-height:1.9}a{color:inherit;text-decoration:none}.container{width:min(1120px,calc(100% - 40px));margin:auto}
+header{position:sticky;top:0;z-index:20;background:rgba(16,29,53,.96);backdrop-filter:blur(14px);color:#fff;border-bottom:1px solid #ffffff18}.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:12px;font-weight:800}.brand-mark{width:42px;height:42px;border:1px solid var(--gold);border-radius:13px;display:grid;place-items:center;color:var(--gold);font-size:20px}.brand small{display:block;color:#c6ceda;font-size:11px;font-weight:400;margin-top:-5px}.links{display:flex;align-items:center;gap:25px;font-size:14px;color:#e4e9f1}.links a:hover{color:var(--gold)}.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:12px;padding:11px 18px;background:var(--gold);color:#17233a;font-weight:700;font-size:14px;transition:.2s}.nav-cta:hover,.btn:hover{transform:translateY(-2px);filter:brightness(1.05)}.menu{display:none;background:none;border:1px solid #ffffff55;color:white;border-radius:10px;padding:7px 11px;font:inherit}
+.hero{position:relative;overflow:hidden;background:radial-gradient(ellipse at 15% 20%,#2c4267 0,transparent 38%),linear-gradient(130deg,#101d35,#1b3154);color:white;padding:105px 0 100px}.hero:after{content:"";position:absolute;width:420px;height:420px;border:1px solid #d8b56d33;border-radius:50%;left:-120px;bottom:-260px;box-shadow:0 0 0 45px #d8b56d0a,0 0 0 90px #d8b56d08}.hero-content{position:relative;z-index:1;max-width:720px}.eyebrow{color:var(--gold);font-size:13px;font-weight:700;letter-spacing:.3px}.hero h1{font-size:clamp(36px,6vw,62px);line-height:1.35;margin:16px 0 18px;font-weight:900}.hero h1 span{color:var(--gold)}.hero p{color:#d5dce7;max-width:620px;font-size:17px;margin:0 0 30px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap}.btn-outline{border:1px solid #ffffff66;color:#fff;background:#ffffff0c}.hero-note{margin-top:55px;padding-top:18px;border-top:1px solid #ffffff24;color:#b9c4d5;font-size:12px}
+section{padding:82px 0}.section-head{max-width:650px;margin-bottom:34px}.section-head .eyebrow{color:#a17a32}.section-head h2{font-size:clamp(27px,4vw,38px);line-height:1.4;margin:8px 0 10px;color:var(--navy)}.section-head p{margin:0;color:var(--muted)}
+.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:stretch}.about-copy,.values-card{background:#fff;border:1px solid #e9e5dc;border-radius:22px;padding:30px}.about-copy p{color:#5e6878}.values-card{background:var(--navy);color:white;display:grid;grid-template-columns:1fr 1fr;gap:18px}.value{padding:14px;border:1px solid #ffffff20;border-radius:15px}.value b{display:block;color:var(--gold);font-size:16px;margin-bottom:4px}.value span{font-size:13px;color:#d1d8e4}
+.candidates{background:#fff}.candidate-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.candidate{border:1px solid #e8eaf0;border-radius:20px;padding:24px;background:#fff;transition:.2s}.candidate:hover{transform:translateY(-4px);box-shadow:0 14px 35px #14233b12}.avatar{width:62px;height:62px;border-radius:18px;background:#f2ead9;color:#96702e;display:grid;place-items:center;font-size:25px;margin-bottom:17px}.candidate h3{margin:0 0 3px;font-size:18px}.candidate .class{color:#9a783c;font-size:12px;font-weight:700}.candidate p{font-size:13px;color:var(--muted);margin:12px 0 0}.placeholder{border-style:dashed;background:#faf9f6}
+.channel{background:#f0ede5}.channel-box{border-radius:24px;padding:38px;background:linear-gradient(120deg,#142541,#203b62);color:#fff;display:flex;align-items:center;justify-content:space-between;gap:25px}.channel-box h2{margin:0 0 6px;font-size:26px}.channel-box p{margin:0;color:#d2dbe8;font-size:14px}.channel-icon{width:58px;height:58px;border-radius:18px;background:#ffffff16;display:grid;place-items:center;color:var(--gold);font-size:26px;flex-shrink:0}.channel-text{display:flex;align-items:center;gap:18px}.channel-box .btn{white-space:nowrap}
+footer{background:#0c172a;color:#d8dfeb;padding:30px 0}.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap}.footer-brand{font-weight:800;color:white}.footer-inner small{color:#9eabc0}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s ease}.reveal.visible{opacity:1;transform:none}
+@media(max-width:800px){.links{display:none;position:absolute;top:76px;right:0;left:0;background:var(--navy);padding:18px 22px 24px;flex-direction:column;align-items:stretch;gap:12px;border-top:1px solid #ffffff22}.links.open{display:flex}.links a{padding:5px 0}.menu{display:block}.nav-cta{display:none}.about-grid{grid-template-columns:1fr}.candidate-grid{grid-template-columns:1fr 1fr}.hero{padding:78px 0}.channel-box{align-items:flex-start;flex-direction:column}}
+@media(max-width:520px){.container{width:min(100% - 30px,1120px)}.nav{height:68px}.links{top:68px}.brand-mark{width:38px;height:38px}.hero h1{font-size:36px}.hero p{font-size:15px}.candidate-grid{grid-template-columns:1fr}.values-card{grid-template-columns:1fr 1fr;padding:18px}.about-copy{padding:22px}.channel-box{padding:25px}.channel-box h2{font-size:22px}section{padding:62px 0}.hero-note{margin-top:38px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}*{transition:none!important}}
+</style>
+</head>
+<body>
+<header><div class="container nav">
+<a class="brand" href="#home" aria-label="حزب توسعه البرز، صفحه اصلی"><span class="brand-mark">ت</span><span>حزب توسعه البرز<small>معرفی و اطلاع‌رسانی شورای دانش‌آموزی</small></span></a>
+<nav class="links" id="navLinks" aria-label="ناوبری اصلی"><a href="#home">صفحه اصلی</a><a href="#about">درباره حزب</a><a href="#candidates">نامزدها</a><a href="#channel">کانال بله</a></nav>
+<a class="nav-cta" href="#candidates">مشاهده نامزدها</a><button class="menu" id="menuBtn" aria-expanded="false" aria-controls="navLinks">منو ☰</button>
+</div></header>
+<main>
+<section class="hero" id="home"><div class="container"><div class="hero-content">
+<div class="eyebrow">معرفی حزب دانش‌آموزی</div>
+<h1>با هم برای <span>توسعه</span>،<br>با هم برای آینده</h1>
+<p>به وب‌سایت حزب توسعه البرز خوش آمدید؛ اینجا می‌توانید با اعضا و نامزدهای حزب آشنا شوید، دیدگاه‌ها و برنامه‌های اعلام‌شده را بخوانید و اطلاعیه‌ها را دنبال کنید.</p>
+<div class="hero-actions"><a class="btn" href="#candidates">آشنایی با نامزدها ←</a><a class="btn btn-outline" href="#about">درباره حزب</a></div>
+<div class="hero-note">پایگاه معرفی و اطلاع‌رسانی حزب توسعه البرز</div>
+</div></div></section>
+<section id="about"><div class="container">
+<div class="section-head reveal"><div class="eyebrow">درباره ما</div><h2>حزب توسعه البرز چیست؟</h2><p>آشنایی با هویت، اعضا و اهدافی که حزب معرفی می‌کند.</p></div>
+<div class="about-grid"><article class="about-copy reveal"><h3>معرفی حزب</h3><p>حزب توسعه البرز یک گروه دانش‌آموزی با هدف معرفی دیدگاه‌ها و برنامه‌های اعضای خود در انتخابات شورای دانش‌آموزی است. در این وب‌سایت، اطلاعات مربوط به نامزدها، برنامه‌های اعلام‌شده و راه‌های ارتباطی حزب منتشر می‌شود.</p><p>متن این بخش قابل ویرایش است؛ می‌توانید بعداً تاریخچه شکل‌گیری حزب، اعضای مؤسس و توضیحات دقیق‌تر را جایگزین کنید.</p></article>
+<div class="values-card reveal"><div class="value"><b>معرفی شفاف</b><span>اطلاعات و برنامه‌های نامزدها</span></div><div class="value"><b>همفکری</b><span>شنیدن دیدگاه‌های دانش‌آموزان</span></div><div class="value"><b>مسئولیت‌پذیری</b><span>توجه به وظایف شورای دانش‌آموزی</span></div><div class="value"><b>اطلاع‌رسانی</b><span>انتشار اخبار و اطلاعیه‌ها</span></div></div></div>
+</div></section>
+<section class="candidates" id="candidates"><div class="container">
+<div class="section-head reveal"><div class="eyebrow">اعضای حزب</div><h2>نامزدهای حزب توسعه البرز</h2><p>در این بخش، مشخصات و برنامه‌های هر نامزد قرار می‌گیرد. اطلاعات نمونه زیر پس از دریافت اسامی و توضیحات، جایگزین می‌شود.</p></div>
+<div class="candidate-grid">
+<article class="candidate placeholder reveal"><div class="avatar">＋</div><h3>نامزد شماره یک</h3><div class="class">نام و پایه تحصیلی</div><p>معرفی کوتاه و برنامه‌های این نامزد در این قسمت قرار می‌گیرد.</p></article>
+<article class="candidate placeholder reveal"><div class="avatar">＋</div><h3>نامزد شماره دو</h3><div class="class">نام و پایه تحصیلی</div><p>معرفی کوتاه و برنامه‌های این نامزد در این قسمت قرار می‌گیرد.</p></article>
+<article class="candidate placeholder reveal"><div class="avatar">＋</div><h3>نامزد شماره سه</h3><div class="class">نام و پایه تحصیلی</div><p>معرفی کوتاه و برنامه‌های این نامزد در این قسمت قرار می‌گیرد.</p></article>
+</div></div></section>
+<section class="channel" id="channel"><div class="container"><div class="channel-box reveal">
+<div class="channel-text"><div class="channel-icon">✦</div><div><h2>همراه ما در بله باشید</h2><p>اطلاعیه‌ها و خبرهای حزب توسعه البرز را از طریق کانال رسمی دنبال کنید.</p></div></div>
+<a class="btn" href="https://ble.ir/" target="_blank" rel="noopener">ورود به بله ↗</a>
+</div></div></section>
+</main>
+<footer><div class="container footer-inner"><div class="footer-brand">حزب توسعه البرز</div><small>وب‌سایت معرفی و اطلاع‌رسانی شورای دانش‌آموزی</small><small>© <span id="year"></span> تمامی حقوق محفوظ است.</small></div></footer>
+<script>
+const menuBtn=document.getElementById('menuBtn'),navLinks=document.getElementById('navLinks');
+menuBtn.addEventListener('click',()=>{const open=navLinks.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(open))});
+navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navLinks.classList.remove('open');menuBtn.setAttribute('aria-expanded','false')}));
+document.getElementById('year').textContent=new Date().getFullYear();
+const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+</body></html>
