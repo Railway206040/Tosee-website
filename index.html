@@ -75,20 +75,45 @@ section:not(.hero){position:relative}
 @media(max-width:520px){.candidate-photo{height:auto}.candidate h3{font-size:20px}.photo-placeholder strong{font-size:46px!important}.campaign-kicker{font-size:10px}.hero h1{letter-spacing:0}}
 @media(prefers-reduced-motion:reduce){.hero-content,.campaign-kicker{animation:none}}
 
+
+/* Requested usability refinements */
+@media(max-width:700px){
+ .program-table-wrap{overflow:visible;border:0;background:transparent;box-shadow:none}
+ .program-table{display:block;min-width:0;width:100%;border-collapse:separate;border-spacing:0}
+ .program-table thead{display:none}
+ .program-table tbody{display:grid;gap:14px}
+ .program-table tbody tr{display:block;overflow:hidden;border:1px solid #34445a;border-radius:17px;background:#172337;box-shadow:0 10px 25px #0002}
+ .program-table tbody th{display:block;padding:14px 16px;background:#203653;color:#f4d99e!important;font-size:15px;white-space:normal;border:0}
+ .program-table tbody td{display:block;padding:13px 16px;border:0!important;font-size:13px;line-height:2;color:#d0d8e5!important;overflow-wrap:anywhere}
+ .program-table tbody td+td{padding-top:5px;color:#e8c982!important}
+ .program-table tbody td:before{display:block;margin-bottom:4px;color:#9eabc0;font-size:11px;font-weight:800}
+ .program-table tbody td:nth-child(2):before{content:"پیشنهادهای عملی"}
+ .program-table tbody td:nth-child(3):before{content:"روش پیگیری"}
+ .program-table tbody tr:hover{background:#172337}
+}
+@media(max-width:800px){
+ header .nav .nav-cta{display:inline-flex;flex:0 0 auto;padding:8px 10px;font-size:10px;min-height:40px;white-space:nowrap}
+}
+@media(max-width:520px){
+ header .nav .nav-cta{font-size:0;width:40px;height:40px;padding:0;border-radius:11px}
+ header .nav .nav-cta:before{content:"بله";font-size:11px}
+ .hero-actions .btn:last-child{width:100%}
+}
+
 </style>
 </head>
-<body>
+<body data-theme="dark">
 <header><div class="container nav">
 <a class="brand" href="#home" aria-label="حزب توسعه البرز، صفحه اصلی"><span class="brand-mark"><img src="https://cdn.imgurl.ir/uploads/f777451_.png" alt="لوگوی حزب توسعه البرز"></span><span>حزب توسعه البرز<small>معرفی و اطلاع‌رسانی شورای دانش‌آموزی</small></span></a>
 <nav class="links" id="navLinks" aria-label="ناوبری اصلی"><a href="#home">صفحه اصلی</a><a href="#about">درباره حزب</a><a href="#candidates">نامزدها</a><a href="#programs">بررسی برنامه‌ها</a><a href="#channel">کانال بله</a></nav>
-<a class="nav-cta" href="#candidates">مشاهده نامزدها</a><button class="theme-toggle" id="themeToggle" type="button" aria-label="تغییر حالت نمایش">☾ حالت شب</button><button class="menu" id="menuBtn" aria-expanded="false" aria-controls="navLinks">منو ☰</button>
+<a class="nav-cta" href="https://ble.ir/tosee_alborz" target="_blank" rel="noopener">عضویت در کانال بله ↗</a><button class="theme-toggle" id="themeToggle" type="button" aria-label="تغییر حالت نمایش">☾ حالت شب</button><button class="menu" id="menuBtn" aria-expanded="false" aria-controls="navLinks">منو ☰</button>
 </div></header>
 <main>
 <section class="hero" id="home"><div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div><div class="container"><div class="hero-layout"><div class="hero-content">
 <div class="eyebrow">حزب توسعه البرز · ائتلاف انتخاباتی شورای دانش‌آموزی</div><div class="campaign-kicker">چهار نامزد؛ یک اتحاد برای توسعه</div>
 <h1><span class="slogan-word">توسعه</span> را<br>با هم پیش می‌بریم.</h1>
 <p>ما در حزب توسعه البرز برای حضوری متحد و اثرگذار در شورای دانش‌آموزی کنار هم ایستاده‌ایم. چهار نامزد، یک ائتلاف و یک هدف: نمایندگی بهتر دیدگاه‌های دانش‌آموزان. اگر این مسیر را می‌پسندید، نامزدهای حزب را بشناسید و در انتخابات از آن‌ها حمایت کنید.</p>
-<div class="hero-actions"><a class="btn" href="#candidates">حمایت از نامزدهای حزب ←</a><a class="btn btn-outline" href="#programs">دیدن برنامه‌ها</a></div>
+<div class="hero-actions"><a class="btn" href="#candidates">مشاهده نامزدها ←</a><a class="btn btn-outline" href="#programs">دیدن برنامه‌ها</a><a class="btn" href="https://ble.ir/tosee_alborz" target="_blank" rel="noopener">عضویت در کانال بله ↗</a></div>
 <div class="hero-note">پایگاه معرفی حزب، نامزدها و برنامه‌های انتخاباتی</div>
 </div><div class="hero-visual" aria-hidden="true"><div class="visual-grid"></div><div class="visual-ring ring-a"></div><div class="visual-ring ring-b"></div><div class="visual-ring ring-c"></div><div class="visual-core"><strong>توسعه</strong><span>هم‌فکری · مشارکت · مسئولیت</span></div><i class="visual-dot dot-a"></i><i class="visual-dot dot-b"></i><i class="visual-dot dot-c"></i><span class="visual-label label-a">اندیشه‌های نو</span><span class="visual-label label-b">مشارکت</span><span class="visual-label label-c">هم‌فکری</span></div></div></div></section>
 <section id="about"><div class="container">
@@ -118,7 +143,7 @@ section:not(.hero){position:relative}
 <tr><th>رفاهی و محیط مدرسه</th><td>دریافت گزارش درباره نظافت، آب‌خوری‌ها، سرویس‌ها، نور و تجهیزات کلاس‌ها؛ اولویت‌بندی موارد پرتکرار؛ ارائه پیشنهاد برای بهبود فضاهای عمومی و امکانات قابل‌دسترسی دانش‌آموزان.</td><td><span class="status-pending">تهیه فهرست موارد و گزارش پیشرفت</span></td></tr>
 <tr><th>پیگیری و پاسخ‌گویی</th><td>ایجاد راه ارتباطی برای دریافت پیشنهادها؛ دسته‌بندی و ثبت درخواست‌ها؛ انتشار گزارش دوره‌ای از موارد مطرح‌شده، اقدام‌های انجام‌شده و موضوعاتی که هنوز در انتظار پاسخ هستند.</td><td><span class="status-pending">گزارش دوره‌ای و شفاف</span></td></tr>
 </tbody></table></div>
-<div class="election-info reveal"><div class="election-info-mark">i</div><div><strong>توضیح درباره اجرای پیشنهادها</strong><p>این موارد پیشنهادهای اولیه حزب هستند، نه تعهد به اجرای قطعی. شورای دانش‌آموزی می‌تواند آن‌ها را بررسی و پیگیری کند؛ اجرای مواردی که به بودجه، امکانات یا مقررات مدرسه وابسته‌اند، نیازمند هماهنگی و تأیید مسئولان مدرسه است.</p></div></div>
+
 </div></section>
 
 <section class="channel" id="channel"><div class="container"><div class="channel-box reveal">
