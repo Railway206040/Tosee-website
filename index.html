@@ -103,6 +103,26 @@ section:not(.hero){position:relative}
  .hero-actions .btn:last-child{width:100%}
 }
 
+
+/* Mahdiyar photo framing and candidate records UI */
+.candidate-photo.mahdiyar-photo{display:flex;align-items:center;justify-content:center;background:linear-gradient(145deg,#26364d,#111c2d);padding:8px}
+.candidate-photo.mahdiyar-photo:before,.candidate-photo.mahdiyar-photo:after{pointer-events:none;z-index:1}
+.candidate-photo.mahdiyar-photo img{position:relative;z-index:0;display:block;width:100%;height:100%;object-fit:contain;object-position:center;border-radius:12px}
+.candidate-records{margin-top:18px;padding:15px 16px 16px;border:1px solid #d8b56d55;border-radius:16px;background:linear-gradient(135deg,#fbf8f0,#fff);position:relative;overflow:hidden}
+.candidate-records:before{content:"";position:absolute;right:0;top:12px;bottom:12px;width:3px;border-radius:4px;background:linear-gradient(#e7c47d,#b58b49)}
+.candidate-records>strong{display:flex;align-items:center;gap:8px;color:#8b682e;font-size:13px;margin:0 0 10px}
+.candidate-records>strong:before{content:"";width:7px;height:7px;border-radius:50%;background:#d8b56d;box-shadow:0 0 0 4px #d8b56d22}
+.candidate-records ul{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.candidate-records li{position:relative;padding:8px 12px 8px 10px;border:1px solid #eee5d3;border-radius:10px;background:#fff;color:#465267;font-size:13px;line-height:1.9}
+.candidate-records li:before{content:"✓";display:inline-grid;place-items:center;width:19px;height:19px;margin-left:8px;border-radius:6px;background:#f5eddb;color:#987333;font-size:11px;font-weight:900}
+.candidate-records .records-empty{display:inline-block;padding:5px 10px;border-radius:8px;background:#f2f3f5;color:#8791a0}
+body[data-theme="dark"] .candidate-records{background:linear-gradient(135deg,#1d2b40,#172337);border-color:#b58b4966}
+body[data-theme="dark"] .candidate-records>strong{color:#f0d69f}
+body[data-theme="dark"] .candidate-records li{background:#202f44;border-color:#3a4a60;color:#dce4ef}
+body[data-theme="dark"] .candidate-records li:before{background:#3b3428;color:#f0d69f}
+body[data-theme="dark"] .candidate-records .records-empty{background:#26354a;color:#b9c4d5}
+@media(max-width:520px){.candidate-photo.mahdiyar-photo{padding:6px}.candidate-records{padding:13px 14px 14px}.candidate-records li{font-size:12px}}
+
 </style>
 </head>
 <body data-theme="dark">
@@ -127,7 +147,7 @@ section:not(.hero){position:relative}
 <section class="candidates" id="candidates"><div class="container">
 <div class="section-head reveal"><div class="eyebrow">معرفی نامزدها</div><h2>چهار نامزد، یک تیم، یک مسیر رو به جلو</h2><p>حزب توسعه البرز با تیم چهار نفره خود در انتخابات شورای دانش‌آموزی حضور دارد. ما به هم‌فکری، پیگیری خواسته‌های دانش‌آموزان و مسئولیت‌پذیری باور داریم. نامزدهای ما را بشناسید، دیدگاه‌هایشان را دنبال کنید و اگر این مسیر را شایسته حمایت می‌دانید، در انتخابات به آن‌ها رأی دهید.</p></div>
 <div class="candidate-grid">
-<article class="candidate reveal"><div class="candidate-photo"><img src="https://cdn.imgurl.ir/uploads/v133868_.jpg" alt="تصویر مهدیار صالحی" loading="lazy"></div><div class="candidate-info"><h3>مهدیار صالحی</h3><div class="class">پایه یازدهم · رشته ریاضی · کلاس ۲۰۸</div><div class="candidate-records"><strong>سوابق</strong><ul><li>دو سال همیار مشاور</li><li>مدیر انجمن‌های دانش‌آموزی</li></ul></div></div></article>
+<article class="candidate reveal"><div class="candidate-photo mahdiyar-photo"><img src="https://cdn.imgurl.ir/uploads/v133868_.jpg" alt="تصویر مهدیار صالحی" loading="lazy"></div><div class="candidate-info"><h3>مهدیار صالحی</h3><div class="class">پایه یازدهم · رشته ریاضی · کلاس ۲۰۸</div><div class="candidate-records"><strong>سوابق</strong><ul><li>دو سال همیار مشاور</li><li>یک سال مدیر انجمن‌های دانش‌آموزی</li></ul></div></div></article>
 <article class="candidate reveal"><div class="candidate-photo"><div class="photo-placeholder"><strong>آ‌ش</strong><span>تصویر نامزد به‌زودی</span></div></div><div class="candidate-info"><h3>آرگ شاوردیان</h3><div class="class">پایه یازدهم · رشته ریاضی · کلاس ۲۰۸</div><div class="candidate-records"><strong>سوابق</strong><div class="records-empty">—</div></div></div></article>
 <article class="candidate reveal"><div class="candidate-photo sepehr-photo"><img src="https://cdn.imgurl.ir/uploads/z248922_.jpg" alt="تصویر سپهر نظرپور" loading="lazy"></div><div class="candidate-info"><h3>سپهر نظرپور</h3><div class="class">پایه یازدهم · رشته تجربی · کلاس ۲۱۵</div><div class="candidate-records"><strong>سوابق</strong><div class="records-empty">—</div></div></div></article>
 <article class="candidate reveal"><div class="candidate-photo"><div class="photo-placeholder"><strong>م‌ش</strong><span>تصویر نامزد به‌زودی</span></div></div><div class="candidate-info"><h3>محمدرضا شبانی</h3><div class="class">پایه یازدهم · رشته ریاضی · کلاس ۲۰۸</div><div class="candidate-records"><strong>سوابق</strong><div class="records-empty">—</div></div></div></article>
