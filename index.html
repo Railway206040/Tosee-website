@@ -27,6 +27,54 @@ body[data-theme="dark"]{--cream:#101827;--ink:#e8edf5;--muted:#aab5c6;--white:#1
 @media(max-width:800px){header .nav{gap:8px}.brand{gap:8px;min-width:0;flex:1}.brand>span:last-child{font-size:13px;line-height:1.55}.brand small{font-size:9px;white-space:normal}.theme-toggle{font-size:11px;padding:8px 9px}.menu{font-size:12px;padding:7px 9px}.nav-cta{display:none}.links{box-shadow:0 14px 24px #07132635}.hero-content{max-width:100%}.hero p{max-width:100%}.channel-text{align-items:flex-start}}
 @media(max-width:520px){.container{width:calc(100% - 28px)}.nav{gap:6px}.brand-mark{width:38px;height:38px;flex:0 0 38px}.brand>span:last-child{font-size:12px}.brand small{font-size:8px}.theme-toggle{font-size:0;width:40px;min-width:40px;padding:0}.theme-toggle::first-letter{font-size:17px}.menu{font-size:11px;white-space:nowrap}.hero{padding:64px 0 58px}.hero h1{font-size:clamp(30px,9vw,38px);line-height:1.45}.hero p{font-size:14px;line-height:2.1}.hero-actions{display:grid;grid-template-columns:1fr;gap:10px}.hero-actions .btn{width:100%}.hero-note{font-size:11px;line-height:2}.section-head{margin-bottom:24px}.section-head h2{font-size:25px}.section-head p{font-size:13px}.about-copy{padding:20px}.about-copy h3{margin-top:0}.values-card{gap:10px}.value{padding:12px 10px}.value b{font-size:14px}.value span{font-size:11px;line-height:1.8}.candidate-grid{gap:16px}.candidate{padding:10px;border-radius:18px}.candidate-photo{height:auto;aspect-ratio:1.18/1}.candidate-info{padding:14px 8px 10px}.candidate h3{font-size:18px}.candidate p{font-size:13px}.vote-note{padding:18px}.vote-note strong{font-size:16px}.vote-note span{display:block;line-height:2;margin-top:5px}.vote-note .btn{width:100%;text-align:center}.channel-box{padding:21px;gap:18px}.channel-text{gap:12px}.channel-icon{width:46px;height:46px;border-radius:14px;font-size:21px}.channel-box h2{font-size:19px}.channel-box p{font-size:12px;line-height:2}.channel-box>.btn{width:100%}.footer-inner{flex-direction:column;align-items:flex-start;gap:7px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}*,*:before,*:after{animation:none!important;transition:none!important}}
+
+/* Campaign visual refresh */
+:root{--gold:#e7c47d;--gold2:#f6dfa8;--navy:#0b1730;--navy2:#1b3157}
+header{box-shadow:0 8px 30px #07132624;border-bottom:1px solid #e7c47d35}
+.brand-mark{border-radius:16px;box-shadow:0 0 0 4px #e7c47d12,0 8px 22px #0003}
+.nav-cta,.btn{border-radius:14px;box-shadow:0 8px 22px #d8b56d2a}
+.hero{background:radial-gradient(ellipse at 78% 18%,#49638e70 0,transparent 34%),radial-gradient(ellipse at 12% 85%,#b58b4930 0,transparent 32%),linear-gradient(128deg,#09152b 0%,#142847 52%,#203b65 100%)}
+.hero:before{content:"";position:absolute;inset:0;opacity:.13;pointer-events:none;background-image:radial-gradient(#f6dfa8 1px,transparent 1px);background-size:28px 28px;mask-image:linear-gradient(110deg,transparent 5%,#000 85%)}
+.hero-content{animation:heroEnter .9s cubic-bezier(.2,.75,.25,1) both}
+.hero-visual{filter:drop-shadow(0 22px 38px #050d1c45)}
+.hero h1{letter-spacing:-1px}
+.hero h1 .slogan-word{background:linear-gradient(100deg,#d8b56d,#fff0bd,#d8b56d);background-size:200% auto;background-clip:text;-webkit-background-clip:text;color:transparent;animation:sloganGlow 3.2s ease-in-out infinite, goldFlow 6s linear infinite}
+.campaign-kicker{box-shadow:0 0 28px #d8b56d16;animation:kickerIn .8s .2s both}
+.btn{position:relative;overflow:hidden}
+.btn:after{content:"";position:absolute;inset:-40% auto -40% -60%;width:35%;transform:skewX(-22deg);background:linear-gradient(90deg,transparent,#fff8,transparent);transition:left .65s}
+.btn:hover:after{left:130%}
+section:not(.hero){position:relative}
+.section-head h2{letter-spacing:-.5px}
+.about-copy,.values-card,.candidate,.program-table-wrap,.channel-box{box-shadow:0 16px 45px #14233b0b}
+.about-copy,.values-card{border-radius:26px}
+.values-card{background:radial-gradient(circle at 100% 0,#334d76 0,transparent 48%),linear-gradient(145deg,#101f3b,#172e50)}
+.value{border-radius:18px;transition:transform .3s,border-color .3s,background .3s}
+.value:hover{transform:translateY(-5px);border-color:#e7c47d88;background:#ffffff0b}
+.candidates{background:radial-gradient(ellipse at 0 0,#e7c47d18,transparent 42%),#fff}
+.candidate{position:relative;border-radius:25px;padding:12px;border:1px solid #e7e0d2;box-shadow:0 12px 34px #14233b0a;transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s,border-color .35s}
+.candidate:before{content:"";position:absolute;inset:0 18px auto;height:3px;border-radius:0 0 6px 6px;background:linear-gradient(90deg,transparent,#d8b56d,transparent);opacity:.7}
+.candidate:hover{transform:translateY(-10px) scale(1.012);box-shadow:0 25px 55px #14233b20;border-color:#d8b56d}
+.candidate-photo{height:250px;border-radius:19px;background:radial-gradient(circle at 50% 35%,#fff8e8,#eee6d6 55%,#dce4ef);isolation:isolate}
+.candidate-photo:before{width:210px;height:210px;border:1px solid #b58b4950;animation:photoOrbit 18s linear infinite}
+.candidate-photo:after{width:270px;height:270px;border:1px dashed #b58b493d;animation:photoOrbit 26s linear infinite reverse}
+.photo-placeholder strong{font-size:52px!important;color:#8c6b37;text-shadow:0 5px 18px #9b7c4430}
+.photo-placeholder span{display:inline-block;margin-top:8px;padding:4px 10px;border-radius:20px;background:#fff9;color:#796746}
+.candidate-info{padding:18px 12px 14px}
+.candidate h3{font-size:22px}
+.candidate .class{display:inline-block;margin-top:5px;padding:4px 10px;border-radius:9px;background:#f7f1e5}
+.candidate-tag{padding:6px 12px;border:1px solid #e9d9b6}
+.vote-note{border-radius:22px;background:linear-gradient(110deg,#fffaf0,#f6f0e3);box-shadow:0 14px 34px #14233b0b}
+.program-table-wrap{border-radius:22px}
+.program-table thead th{background:linear-gradient(100deg,#10213e,#263f66)}
+.channel-box{position:relative;overflow:hidden;background:radial-gradient(circle at 10% 10%,#ffffff16,transparent 30%),linear-gradient(120deg,#0d1c35,#24436f);box-shadow:0 20px 50px #10213e24}
+.channel-box:after{content:"";position:absolute;width:260px;height:260px;border:1px solid #e7c47d2b;border-radius:50%;left:-110px;bottom:-190px;box-shadow:0 0 0 28px #e7c47d09,0 0 0 58px #e7c47d07;pointer-events:none}
+@keyframes heroEnter{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+@keyframes kickerIn{from{opacity:0;transform:translateY(10px) scale(.96)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes goldFlow{to{background-position:200% center}}
+@keyframes photoOrbit{to{rotate:360deg}}
+@media(max-width:520px){.candidate-photo{height:auto}.candidate h3{font-size:20px}.photo-placeholder strong{font-size:46px!important}.campaign-kicker{font-size:10px}.hero h1{letter-spacing:0}}
+@media(prefers-reduced-motion:reduce){.hero-content,.campaign-kicker{animation:none}}
+
 </style>
 </head>
 <body>
@@ -49,18 +97,18 @@ body[data-theme="dark"]{--cream:#101827;--ink:#e8edf5;--muted:#aab5c6;--white:#1
 <div class="values-card reveal"><div class="value"><b>معرفی شفاف</b><span>اطلاعات و برنامه‌های نامزدها</span></div><div class="value"><b>همفکری</b><span>شنیدن دیدگاه‌های دانش‌آموزان</span></div><div class="value"><b>مسئولیت‌پذیری</b><span>توجه به وظایف شورای دانش‌آموزی</span></div><div class="value"><b>اطلاع‌رسانی</b><span>انتشار اخبار و اطلاعیه‌ها</span></div></div></div>
 </div></section>
 <section class="candidates" id="candidates"><div class="container">
-<div class="section-head reveal"><div class="eyebrow">معرفی نامزدها</div><h2>چهار نامزد؛ یک انتخاب برای توسعه</h2><p>این چهار نفر، نامزدهای حزب توسعه البرز در انتخابات شورای دانش‌آموزی هستند. ما با معرفی یک تیم متحد وارد انتخابات شده‌ایم و از دیدگاه و برنامه‌های نامزدهای خود حمایت می‌کنیم. اینجا آن‌ها را بشناسید و با برنامه‌هایشان آشنا شوید.</p></div>
+<div class="section-head reveal"><div class="eyebrow">معرفی نامزدها</div><h2>چهار نامزد، یک تیم، یک مسیر رو به جلو</h2><p>حزب توسعه البرز با تیم چهار نفره خود در انتخابات شورای دانش‌آموزی حضور دارد. ما به هم‌فکری، پیگیری خواسته‌های دانش‌آموزان و مسئولیت‌پذیری باور داریم. نامزدهای ما را بشناسید، دیدگاه‌هایشان را دنبال کنید و اگر این مسیر را شایسته حمایت می‌دانید، در انتخابات به آن‌ها رأی دهید.</p></div>
 <div class="candidate-grid">
-<article class="candidate reveal"><div class="candidate-photo"><div class="photo-placeholder"><strong>م‌ص</strong><span>تصویر نامزد به‌زودی</span></div></div><div class="candidate-info"><h3>مهدیار صالحی</h3><div class="class">پایه یازدهم · رشته ریاضی · کلاس ۲۰۸</div><p>توضیحات و برنامه‌های مهدیار صالحی به‌زودی در این قسمت منتشر می‌شود.</p><span class="candidate-tag">معرفی‌شده از جانب حزب توسعه البرز</span></div></article>
-<article class="candidate reveal"><div class="candidate-photo"><div class="photo-placeholder"><strong>ش‌ط</strong><span>تصویر نامزد به‌زودی</span></div></div><div class="candidate-info"><h3>شایان طهماسبی</h3><div class="class">پایه یازدهم · رشته ریاضی · کلاس ۲۰۸</div><p>توضیحات و برنامه‌های شایان طهماسبی به‌زودی در این قسمت منتشر می‌شود.</p><span class="candidate-tag">معرفی‌شده از سوی حزب توسعه البرز</span></div></article>
-<article class="candidate reveal"><div class="candidate-photo"><div class="photo-placeholder"><strong>آ‌ش</strong><span>تصویر نامزد به‌زودی</span></div></div><div class="candidate-info"><h3>آرگ شاوردیان</h3><div class="class">پایه یازدهم · رشته ریاضی · کلاس ۲۰۸</div><p>توضیحات و برنامه‌های آرگ شاوردیان به‌زودی در این قسمت منتشر می‌شود.</p><span class="candidate-tag">معرفی‌شده از سوی حزب توسعه البرز</span></div></article>
-<article class="candidate reveal"><div class="candidate-photo"><div class="photo-placeholder"><strong>س‌ن</strong><span>تصویر نامزد به‌زودی</span></div></div><div class="candidate-info"><h3>سپهر نظرپور</h3><div class="class">پایه یازدهم · رشته تجربی · کلاس ۲۱۴</div><p>توضیحات و برنامه‌های سپهر نظرپور به‌زودی در این قسمت منتشر می‌شود.</p><span class="candidate-tag">معرفی‌شده از سوی حزب توسعه البرز</span></div></article>
+<article class="candidate reveal"><div class="candidate-photo"><div class="photo-placeholder"><strong>م‌ص</strong><span>تصویر نامزد به‌زودی</span></div></div><div class="candidate-info"><h3>مهدیار صالحی</h3><div class="class">پایه یازدهم · رشته ریاضی · کلاس ۲۰۸</div><p>مهدیار صالحی؛ نامزد معرفی‌شده از سوی حزب توسعه البرز برای شورای دانش‌آموزی.</p><span class="candidate-tag">نامزد حزب توسعه البرز</span></div></article>
+<article class="candidate reveal"><div class="candidate-photo"><div class="photo-placeholder"><strong>آ‌ش</strong><span>تصویر نامزد به‌زودی</span></div></div><div class="candidate-info"><h3>آرگ شاوردیان</h3><div class="class">پایه یازدهم · رشته ریاضی · کلاس ۲۰۸</div><p>آرگ شاوردیان؛ نامزد معرفی‌شده از سوی حزب توسعه البرز برای شورای دانش‌آموزی.</p><span class="candidate-tag">نامزد حزب توسعه البرز</span></div></article>
+<article class="candidate reveal"><div class="candidate-photo"><div class="photo-placeholder"><strong>س‌ن</strong><span>تصویر نامزد به‌زودی</span></div></div><div class="candidate-info"><h3>سپهر نظرپور</h3><div class="class">پایه یازدهم · رشته تجربی · کلاس ۲۱۵</div><p>سپهر نظرپور؛ نامزد معرفی‌شده از سوی حزب توسعه البرز برای شورای دانش‌آموزی.</p><span class="candidate-tag">نامزد حزب توسعه البرز</span></div></article>
+<article class="candidate reveal"><div class="candidate-photo"><div class="photo-placeholder"><strong>م‌ش</strong><span>تصویر نامزد به‌زودی</span></div></div><div class="candidate-info"><h3>محمدرضا شبانی</h3><div class="class">پایه یازدهم · رشته ریاضی · کلاس ۲۰۸</div><p>محمدرضا شبانی؛ نامزد معرفی‌شده از سوی حزب توسعه البرز برای شورای دانش‌آموزی.</p><span class="candidate-tag">نامزد حزب توسعه البرز</span></div></article>
 </div>
-<div class="vote-note reveal"><div><strong>برای توسعه، به نامزدهای حزب توسعه البرز رأی دهید</strong><span>اگر اتحاد و مسیر پیشنهادی حزب را می‌پسندید، در انتخابات شورای دانش‌آموزی از نامزدهای معرفی‌شده از سوی حزب توسعه البرز حمایت کنید.</span></div><a class="btn" href="#programs">برنامه‌های نامزدهای ما ←</a></div>
+<div class="vote-note reveal"><div><strong>صدای توسعه را به شورای دانش‌آموزی ببرید</strong><span>با شناخت چهار نامزد حزب توسعه البرز و بررسی برنامه‌هایشان، از تیمی حمایت کنید که بر هم‌فکری، پیگیری و پاسخ‌گویی تأکید دارد.</span></div><a class="btn" href="#programs">برنامه‌های نامزدهای ما ←</a></div>
 </div></section>
 
 <section id="programs"><div class="container">
-<div class="section-head reveal"><div class="eyebrow">بررسی برنامه‌ها</div><h2>برنامه‌ها را کنار هم بررسی کنید</h2><p>برای شناخت بهتر نامزدها، برنامه‌های مکتوب و قابل‌پیگیری آن‌ها را در موضوعات مختلف با هم مقایسه کنید. موارد زیر چارچوب بررسی هستند؛ جزئیات هر نامزد پس از اعلام رسمی در این جدول تکمیل می‌شود.</p></div>
+<div class="section-head reveal"><div class="eyebrow">بررسی برنامه‌ها</div><h2>حرف ما، برنامه و پیگیری است</h2><p>توسعه فقط یک شعار نیست؛ به ایده‌های روشن، پیگیری مسئولانه و شنیدن صدای دانش‌آموزان نیاز دارد. محورهای زیر چارچوبی برای بررسی برنامه‌های نامزدهای حزب توسعه البرز هستند. جزئیات اجرایی پس از اعلام برنامه‌های نهایی منتشر می‌شود.</p></div>
 <div class="program-table-wrap reveal" role="region" aria-label="جدول محورهای بررسی برنامه نامزدها" tabindex="0">
 <table class="program-table">
 <thead><tr><th>محور بررسی</th><th>چه چیزی را بررسی کنیم؟</th><th>وضعیت اطلاعات</th></tr></thead>
@@ -72,7 +120,8 @@ body[data-theme="dark"]{--cream:#101827;--ink:#e8edf5;--muted:#aab5c6;--white:#1
 </tbody></table></div>
 <div class="election-info reveal"><div class="election-info-mark">i</div><div><strong>نکته درباره شیوه رأی‌دادن</strong><p>طبق توضیح اعلام‌شده درباره این انتخابات، هر دانش‌آموز می‌تواند به بیش از یک نامزد رأی بدهد. تعداد رأی مجاز و جزئیات نهایی را از مسئولان برگزارکننده انتخابات پیگیری کنید.</p></div></div>
 </div></section>
-\n<section class="channel" id="channel"><div class="container"><div class="channel-box reveal">
+
+<section class="channel" id="channel"><div class="container"><div class="channel-box reveal">
 <div class="channel-text"><div class="channel-icon">✦</div><div><h2>اطلاعیه‌های حزب توسعه البرز</h2><p>برای دسترسی به خبرها، اطلاعیه‌ها و معرفی برنامه‌های منتشرشده، کانال بله را ببینید.</p></div></div>
 <a class="btn" href="https://ble.ir/tosee_alborz" target="_blank" rel="noopener">مشاهده کانال در بله ↗</a>
 </div></div></section>
