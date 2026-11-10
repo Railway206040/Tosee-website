@@ -54,7 +54,7 @@ section:not(.hero){position:relative}
 .candidate{position:relative;border-radius:25px;padding:12px;border:1px solid #e7e0d2;box-shadow:0 12px 34px #14233b0a;transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s,border-color .35s}
 .candidate:before{content:"";position:absolute;inset:0 18px auto;height:3px;border-radius:0 0 6px 6px;background:linear-gradient(90deg,transparent,#d8b56d,transparent);opacity:.7}
 .candidate:hover{transform:translateY(-10px) scale(1.012);box-shadow:0 25px 55px #14233b20;border-color:#d8b56d}
-.candidate-photo{height:250px;border-radius:19px;background:radial-gradient(circle at 50% 35%,#fff8e8,#eee6d6 55%,#dce4ef);isolation:isolate}
+.candidate-photo.sepehr-photo{display:block;background:#e9e3d5}.candidate-photo.sepehr-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 20%;border-radius:19px}.channel-icon img{display:block;width:100%;height:100%;padding:7px;object-fit:contain;border-radius:inherit}.candidate-photo{height:250px;border-radius:19px;background:radial-gradient(circle at 50% 35%,#fff8e8,#eee6d6 55%,#dce4ef);isolation:isolate}
 .candidate-photo:before{width:210px;height:210px;border:1px solid #b58b4950;animation:photoOrbit 18s linear infinite}
 .candidate-photo:after{width:270px;height:270px;border:1px dashed #b58b493d;animation:photoOrbit 26s linear infinite reverse}
 .photo-placeholder strong{font-size:52px!important;color:#8c6b37;text-shadow:0 5px 18px #9b7c4430}
@@ -101,7 +101,7 @@ section:not(.hero){position:relative}
 <div class="candidate-grid">
 <article class="candidate reveal"><div class="candidate-photo"><div class="photo-placeholder"><strong>م‌ص</strong><span>تصویر نامزد به‌زودی</span></div></div><div class="candidate-info"><h3>مهدیار صالحی</h3><div class="class">پایه یازدهم · رشته ریاضی · کلاس ۲۰۸</div><p>مهدیار صالحی؛ نامزد معرفی‌شده از سوی حزب توسعه البرز برای شورای دانش‌آموزی.</p><span class="candidate-tag">نامزد حزب توسعه البرز</span></div></article>
 <article class="candidate reveal"><div class="candidate-photo"><div class="photo-placeholder"><strong>آ‌ش</strong><span>تصویر نامزد به‌زودی</span></div></div><div class="candidate-info"><h3>آرگ شاوردیان</h3><div class="class">پایه یازدهم · رشته ریاضی · کلاس ۲۰۸</div><p>آرگ شاوردیان؛ نامزد معرفی‌شده از سوی حزب توسعه البرز برای شورای دانش‌آموزی.</p><span class="candidate-tag">نامزد حزب توسعه البرز</span></div></article>
-<article class="candidate reveal"><div class="candidate-photo"><div class="photo-placeholder"><strong>س‌ن</strong><span>تصویر نامزد به‌زودی</span></div></div><div class="candidate-info"><h3>سپهر نظرپور</h3><div class="class">پایه یازدهم · رشته تجربی · کلاس ۲۱۵</div><p>سپهر نظرپور؛ نامزد معرفی‌شده از سوی حزب توسعه البرز برای شورای دانش‌آموزی.</p><span class="candidate-tag">نامزد حزب توسعه البرز</span></div></article>
+<article class="candidate reveal"><div class="candidate-photo sepehr-photo"><img src="https://cdn.imgurl.ir/uploads/z248922_.jpg" alt="تصویر سپهر نظرپور" loading="lazy"></div><div class="candidate-info"><h3>سپهر نظرپور</h3><div class="class">پایه یازدهم · رشته تجربی · کلاس ۲۱۵</div><p>سپهر نظرپور؛ نامزد معرفی‌شده از سوی حزب توسعه البرز برای شورای دانش‌آموزی.</p><span class="candidate-tag">نامزد حزب توسعه البرز</span></div></article>
 <article class="candidate reveal"><div class="candidate-photo"><div class="photo-placeholder"><strong>م‌ش</strong><span>تصویر نامزد به‌زودی</span></div></div><div class="candidate-info"><h3>محمدرضا شبانی</h3><div class="class">پایه یازدهم · رشته ریاضی · کلاس ۲۰۸</div><p>محمدرضا شبانی؛ نامزد معرفی‌شده از سوی حزب توسعه البرز برای شورای دانش‌آموزی.</p><span class="candidate-tag">نامزد حزب توسعه البرز</span></div></article>
 </div>
 <div class="vote-note reveal"><div><strong>صدای توسعه را به شورای دانش‌آموزی ببرید</strong><span>با شناخت چهار نامزد حزب توسعه البرز و بررسی برنامه‌هایشان، از تیمی حمایت کنید که بر هم‌فکری، پیگیری و پاسخ‌گویی تأکید دارد.</span></div><a class="btn" href="#programs">برنامه‌های نامزدهای ما ←</a></div>
@@ -122,7 +122,7 @@ section:not(.hero){position:relative}
 </div></section>
 
 <section class="channel" id="channel"><div class="container"><div class="channel-box reveal">
-<div class="channel-text"><div class="channel-icon">✦</div><div><h2>اطلاعیه‌های حزب توسعه البرز</h2><p>برای دسترسی به خبرها، اطلاعیه‌ها و معرفی برنامه‌های منتشرشده، کانال بله را ببینید.</p></div></div>
+<div class="channel-text"><div class="channel-icon"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9zy6C7abI-l8xre_1_a3ZQGmUzRRskKZ-YzWtupL2Kg&amp;s=10" alt="نشان کانال بله" loading="lazy"></div><div><h2>اطلاعیه‌های حزب توسعه البرز</h2><p>برای دسترسی به خبرها، اطلاعیه‌ها و معرفی برنامه‌های منتشرشده، کانال بله را ببینید.</p></div></div>
 <a class="btn" href="https://ble.ir/tosee_alborz" target="_blank" rel="noopener">مشاهده کانال در بله ↗</a>
 </div></div></section>
 </main>
