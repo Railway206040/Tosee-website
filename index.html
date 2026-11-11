@@ -204,3 +204,29 @@ document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 .candidate-info .candidate-skills{margin-bottom:0!important}
 .candidate-info>a.poster-download{display:flex!important;width:max-content!important;min-width:190px!important;max-width:100%!important;margin:26px auto 6px!important;align-self:center!important;justify-content:center!important;text-align:center!important}
 @media(max-width:520px){.candidate-photo.mohammadreza-photo{aspect-ratio:1.18/1;height:auto!important;padding:6px!important}.candidate-photo.mohammadreza-photo img{object-fit:contain!important}.candidate-info>a.poster-download{margin-top:26px!important;width:max-content!important}}
+
+
+/* Global horizontal-overflow guard, especially on narrow phones */
+html,body{width:100%;max-width:100%;overflow-x:clip}
+body{position:relative}
+*,*::before,*::after{max-inline-size:100%}
+img,video,iframe,svg{max-width:100%;}
+.container,.nav,.hero-layout,.about-grid,.candidate-grid,.candidate,.candidate-info,.channel-box,.channel-text,.section-head,.program-table-wrap{min-width:0;max-width:100%}
+.hero,.candidates,section,header,footer{max-width:100%;overflow-x:clip}
+@media(max-width:800px){
+ .hero-layout,.about-grid,.candidate-grid,.channel-box,.channel-text{width:100%;min-width:0}
+ .hero-visual{width:100%;max-width:100%;overflow:hidden}
+ .candidate,.candidate-info{min-width:0;width:100%}
+ .candidate-photo img{max-width:100%;}
+ .program-table-wrap,.program-table{max-width:100%;}
+ .program-table tbody td,.program-table tbody th{overflow-wrap:anywhere;word-break:normal}
+ .nav{width:calc(100% - 28px)}
+}
+@media(max-width:520px){
+ html,body{overflow-x:hidden}
+ .container{width:calc(100% - 28px);max-width:100%}
+ .hero h1,.hero p,.section-head h2,.section-head p{max-width:100%;overflow-wrap:anywhere}
+ .campaign-kicker{max-width:100%;white-space:normal}
+ .candidate-photo{max-width:100%;}
+ .poster-download{max-width:100%;white-space:normal}
+}
