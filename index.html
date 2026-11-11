@@ -196,3 +196,11 @@ const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entr
 document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 </script>
 </body></html>
+
+/* Mobile-safe Mohammadreza photo fit + poster button placement */
+.candidate-photo.mohammadreza-photo{display:flex!important;align-items:center!important;justify-content:center!important;padding:8px!important;overflow:hidden!important;background:linear-gradient(145deg,#26364d,#111c2d)!important}
+.candidate-photo.mohammadreza-photo:before,.candidate-photo.mohammadreza-photo:after{display:none!important}
+.candidate-photo.mohammadreza-photo img{display:block!important;position:relative!important;inset:auto!important;width:100%!important;height:100%!important;max-width:100%!important;max-height:100%!important;object-fit:contain!important;object-position:center!important;border-radius:10px!important}
+.candidate-info .candidate-skills{margin-bottom:0!important}
+.candidate-info>a.poster-download{display:flex!important;width:max-content!important;min-width:190px!important;max-width:100%!important;margin:26px auto 6px!important;align-self:center!important;justify-content:center!important;text-align:center!important}
+@media(max-width:520px){.candidate-photo.mohammadreza-photo{aspect-ratio:1.18/1;height:auto!important;padding:6px!important}.candidate-photo.mohammadreza-photo img{object-fit:contain!important}.candidate-info>a.poster-download{margin-top:26px!important;width:max-content!important}}
