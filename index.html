@@ -171,8 +171,23 @@ img, video, iframe, svg { max-width:100%; }
   .channel-box, .channel-text { max-width:100%; }
   .channel-text { align-items:flex-start; }
   .channel-text>div:last-child { min-width:0; overflow-wrap:anywhere; }
-  .program-table-wrap { width:100%; max-width:100%; }
-  .program-table { min-width:620px; }
+  /* Turn the programs table into stacked cards on phones: no inner scrolling */
+  .program-table-wrap { width:100%; max-width:100%; overflow:visible!important; border:0; border-radius:0; background:transparent; box-shadow:none; }
+  .program-table { width:100%; min-width:0!important; table-layout:fixed; border-collapse:separate; border-spacing:0 12px; display:block; }
+  .program-table thead { display:none; }
+  .program-table tbody { display:grid; grid-template-columns:minmax(0,1fr); gap:12px; width:100%; }
+  .program-table tbody tr { display:grid; grid-template-columns:minmax(0,1fr); width:100%; min-width:0; overflow:hidden; border:1px solid #e8e2d5; border-radius:16px; background:#fff; box-shadow:0 8px 22px #14233b0a; }
+  .program-table tbody th { display:block; width:100%; min-width:0; padding:14px 15px; white-space:normal; overflow-wrap:anywhere; background:#172b4d; color:#fff!important; font-size:15px; }
+  .program-table tbody td { display:block; width:100%; min-width:0; padding:12px 15px; border-bottom:1px solid #eee9df; font-size:13px; line-height:2; overflow-wrap:anywhere; word-break:normal; }
+  .program-table tbody td:last-child { border-bottom:0; }
+  .program-table tbody td:before { display:block; margin-bottom:4px; color:#8a682f; font-size:11px; font-weight:800; }
+  .program-table tbody td:nth-child(2):before { content:"پیشنهادهای عملی حزب"; }
+  .program-table tbody td:nth-child(3):before { content:"روش پیگیری"; }
+  .program-table .status-pending { white-space:normal; line-height:1.8; }
+  body[data-theme="dark"] .program-table tbody tr { background:#172337; border-color:#34445a; }
+  body[data-theme="dark"] .program-table tbody th { background:#263b5c; color:#f0f3f8!important; }
+  body[data-theme="dark"] .program-table tbody td { border-color:#334258; color:#bdc8d8; }
+  body[data-theme="dark"] .program-table tbody td:before { color:#e8c982; }
   .footer-inner { min-width:0; }
 }
 
