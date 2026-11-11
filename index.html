@@ -127,7 +127,61 @@ body[data-theme="dark"] .candidate-records li:before{background:#3b3428;color:#f
 body[data-theme="dark"] .candidate-records .records-empty{background:#26354a;color:#b9c4d5}
 @media(max-width:520px){.candidate-photo.mahdiyar-photo{padding:6px}.candidate-records{padding:13px 14px 14px}.candidate-records li{font-size:12px}}
 
-\n/* Candidate skills and poster download buttons */\n.candidate-skills{margin-top:12px;background:linear-gradient(135deg,#f7f9fc,#fff);border-color:#dfe6ef}\n.candidate-skills>strong{color:#344b6b}\n.poster-download{display:flex;width:100%;margin-top:14px;text-align:center}\n.poster-unavailable{background:#e8ebf0;color:#7b8492;box-shadow:none;cursor:not-allowed;pointer-events:none}\nbody[data-theme="dark"] .candidate-skills{background:linear-gradient(135deg,#202f44,#172337);border-color:#3a4a60}\nbody[data-theme="dark"] .candidate-skills>strong{color:#dce4ef}\nbody[data-theme="dark"] .poster-unavailable{background:#2b3748;color:#9ba8ba}\n@media(max-width:520px){.poster-download{font-size:13px}}\n</style>
+\n/* Candidate skills and poster download buttons */\n.candidate-skills{margin-top:12px;background:linear-gradient(135deg,#f7f9fc,#fff);border-color:#dfe6ef}\n.candidate-skills>strong{color:#344b6b}\n.poster-download{display:flex;width:100%;margin-top:14px;text-align:center}\n.poster-unavailable{background:#e8ebf0;color:#7b8492;box-shadow:none;cursor:not-allowed;pointer-events:none}\nbody[data-theme="dark"] .candidate-skills{background:linear-gradient(135deg,#202f44,#172337);border-color:#3a4a60}\nbody[data-theme="dark"] .candidate-skills>strong{color:#dce4ef}\nbody[data-theme="dark"] .poster-unavailable{background:#2b3748;color:#9ba8ba}\n@media(max-width:520px){.poster-download{font-size:13px}}\n
+/* Mobile layout repair: keep all content inside the device viewport */
+html { width:100%; max-width:100%; overflow-x:hidden; }
+body { width:100%; max-width:100%; min-width:0; overflow-x:hidden; position:relative; }
+*, *::before, *::after { box-sizing:border-box; }
+img, video, iframe, svg { max-width:100%; }
+.container { width:min(1120px, calc(100% - 40px)); min-width:0; margin-inline:auto; }
+.hero, main, section, header, footer { width:100%; max-width:100%; min-width:0; }
+.hero-layout, .about-grid, .candidate-grid, .channel-box, .channel-text { min-width:0; }
+.candidate, .candidate-info, .section-head, .about-copy, .values-card { min-width:0; max-width:100%; }
+.program-table-wrap { width:100%; max-width:100%; overflow-x:auto; overscroll-behavior-x:contain; }
+.program-table { min-width:620px; }
+.candidate-photo img { max-width:100%; }
+.candidate-photo.mohammadreza-photo { display:flex!important; align-items:center!important; justify-content:center!important; padding:8px!important; overflow:hidden!important; background:linear-gradient(145deg,#26364d,#111c2d)!important; }
+.candidate-photo.mohammadreza-photo:before, .candidate-photo.mohammadreza-photo:after { display:none!important; }
+.candidate-photo.mohammadreza-photo img { display:block!important; position:relative!important; inset:auto!important; width:100%!important; height:100%!important; max-width:100%!important; max-height:100%!important; object-fit:contain!important; object-position:center!important; border-radius:10px!important; }
+.candidate-info .candidate-skills { margin-bottom:0!important; }
+.candidate-info>a.poster-download { display:flex!important; width:max-content!important; min-width:190px!important; max-width:100%!important; margin:26px auto 6px!important; align-self:center!important; justify-content:center!important; text-align:center!important; }
+@media(max-width:800px) {
+  .container { width:calc(100% - 32px); }
+  .hero-layout { width:100%; grid-template-columns:minmax(0,1fr); gap:8px; }
+  .hero-content { width:100%; max-width:100%; min-width:0; }
+  .hero-visual { width:100%; max-width:100%; overflow:hidden; }
+  .about-grid { width:100%; grid-template-columns:minmax(0,1fr); }
+  .candidate-grid { width:100%; grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .channel-box { width:100%; min-width:0; }
+  .channel-text { min-width:0; }
+  .nav { width:calc(100% - 32px); min-width:0; }
+  .links { max-width:100%; }
+}
+@media(max-width:520px) {
+  html, body { width:100%; max-width:100%; overflow-x:hidden!important; }
+  .container { width:calc(100% - 28px); max-width:100%; margin-inline:auto; }
+  header .nav { width:calc(100% - 28px); height:68px; gap:6px; }
+  .brand { flex:1 1 auto; min-width:0; }
+  .brand>span:last-child { min-width:0; overflow-wrap:anywhere; }
+  .hero { padding:58px 0 54px; }
+  .hero-layout, .about-grid, .candidate-grid, .channel-box { width:100%; min-width:0; }
+  .candidate-grid { grid-template-columns:minmax(0,1fr); }
+  .candidate, .candidate-info { width:100%; min-width:0; }
+  .candidate-photo { width:100%; max-width:100%; aspect-ratio:1.18/1; height:auto; }
+  .candidate-photo.mohammadreza-photo { aspect-ratio:1.18/1; height:auto!important; padding:6px!important; }
+  .candidate-photo.mohammadreza-photo img { object-fit:contain!important; }
+  .candidate-info>a.poster-download { margin-top:26px!important; width:max-content!important; }
+  .hero h1, .hero p, .section-head h2, .section-head p, .campaign-kicker { max-width:100%; overflow-wrap:anywhere; }
+  .hero-actions { width:100%; }
+  .channel-box, .channel-text { max-width:100%; }
+  .channel-text { align-items:flex-start; }
+  .channel-text>div:last-child { min-width:0; overflow-wrap:anywhere; }
+  .program-table-wrap { width:100%; max-width:100%; }
+  .program-table { min-width:620px; }
+  .footer-inner { min-width:0; }
+}
+
+</style>
 </head>
 <body data-theme="dark">
 <header><div class="container nav">
@@ -196,37 +250,3 @@ const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entr
 document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 </script>
 </body></html>
-
-/* Mobile-safe Mohammadreza photo fit + poster button placement */
-.candidate-photo.mohammadreza-photo{display:flex!important;align-items:center!important;justify-content:center!important;padding:8px!important;overflow:hidden!important;background:linear-gradient(145deg,#26364d,#111c2d)!important}
-.candidate-photo.mohammadreza-photo:before,.candidate-photo.mohammadreza-photo:after{display:none!important}
-.candidate-photo.mohammadreza-photo img{display:block!important;position:relative!important;inset:auto!important;width:100%!important;height:100%!important;max-width:100%!important;max-height:100%!important;object-fit:contain!important;object-position:center!important;border-radius:10px!important}
-.candidate-info .candidate-skills{margin-bottom:0!important}
-.candidate-info>a.poster-download{display:flex!important;width:max-content!important;min-width:190px!important;max-width:100%!important;margin:26px auto 6px!important;align-self:center!important;justify-content:center!important;text-align:center!important}
-@media(max-width:520px){.candidate-photo.mohammadreza-photo{aspect-ratio:1.18/1;height:auto!important;padding:6px!important}.candidate-photo.mohammadreza-photo img{object-fit:contain!important}.candidate-info>a.poster-download{margin-top:26px!important;width:max-content!important}}
-
-
-/* Global horizontal-overflow guard, especially on narrow phones */
-html,body{width:100%;max-width:100%;overflow-x:clip}
-body{position:relative}
-*,*::before,*::after{max-inline-size:100%}
-img,video,iframe,svg{max-width:100%;}
-.container,.nav,.hero-layout,.about-grid,.candidate-grid,.candidate,.candidate-info,.channel-box,.channel-text,.section-head,.program-table-wrap{min-width:0;max-width:100%}
-.hero,.candidates,section,header,footer{max-width:100%;overflow-x:clip}
-@media(max-width:800px){
- .hero-layout,.about-grid,.candidate-grid,.channel-box,.channel-text{width:100%;min-width:0}
- .hero-visual{width:100%;max-width:100%;overflow:hidden}
- .candidate,.candidate-info{min-width:0;width:100%}
- .candidate-photo img{max-width:100%;}
- .program-table-wrap,.program-table{max-width:100%;}
- .program-table tbody td,.program-table tbody th{overflow-wrap:anywhere;word-break:normal}
- .nav{width:calc(100% - 28px)}
-}
-@media(max-width:520px){
- html,body{overflow-x:hidden}
- .container{width:calc(100% - 28px);max-width:100%}
- .hero h1,.hero p,.section-head h2,.section-head p{max-width:100%;overflow-wrap:anywhere}
- .campaign-kicker{max-width:100%;white-space:normal}
- .candidate-photo{max-width:100%;}
- .poster-download{max-width:100%;white-space:normal}
-}
